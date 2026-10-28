@@ -1,0 +1,4 @@
+# Forcing the form is what makes Area / Work Type / Customer Issue mandatory.
+# With blank_issues_enabled: false, users cannot open a blank issue that bypasses the form.
+blank_issues_enabled: false
+contact_links: []
