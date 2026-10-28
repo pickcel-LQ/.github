@@ -1,0 +1,70 @@
+name: Task / Bug
+description: Create a tracked work item for the Pickcel Product board (Project #15)
+title: "[Task]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing this. **Area**, **Work Type** and **Customer Issue** are required —
+        they keep the product board filterable and get synced to the project fields automatically.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which layer does this work belong to?
+      options:
+        - Front End
+        - Back End
+        - Signage Player
+    validations:
+      required: true
+  - type: dropdown
+    id: work-type
+    attributes:
+      label: Work Type
+      description: What kind of work is this?
+      options:
+        - Bug
+        - Improvement
+        - Feature
+        - Migration
+        - DevOps/Infra
+        - Documentation
+        - Investigation
+        - Test/QA
+    validations:
+      required: true
+  - type: dropdown
+    id: customer-issue
+    attributes:
+      label: Customer Issue
+      description: Is this reported by, or impacting, a live customer / production deployment?
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Only if this is player/device-specific.
+      options:
+        - Not applicable
+        - Android
+        - Tizen/Samsung
+        - LG/webOS
+        - BrightSign
+        - Windows
+        - Raspberry Pi
+        - Linux
+    validations:
+      required: false
+  - type: textarea
+    id: details
+    attributes:
+      label: Description
+      description: What needs to happen? For a bug, include steps to reproduce, expected vs actual, and device/build if relevant.
+      placeholder: Describe the task or bug...
+    validations:
+      required: true
